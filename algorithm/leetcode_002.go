@@ -1,26 +1,5 @@
 package algorithm
 
-import "fmt"
-
-type ListNode struct {
-	Val  int
-	Next *ListNode
-}
-
-func (l *ListNode) Print() string {
-	var str string
-	for l != nil {
-		str = fmt.Sprintf("%v%v", str, l.Val)
-		if l.Next != nil {
-			str = fmt.Sprintf("%v->", str)
-		}
-
-		l = l.Next
-	}
-
-	return str
-}
-
 func LeetCode002(l1 *ListNode, l2 *ListNode) *ListNode {
 	var temp int
 
